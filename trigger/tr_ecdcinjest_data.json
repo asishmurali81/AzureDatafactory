@@ -1,0 +1,18 @@
+{
+	"name": "tr_ecdcinjest_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2021-03-30T12:19:00Z",
+				"endTime": "2021-03-31T12:30:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
