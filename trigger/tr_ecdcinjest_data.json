@@ -18,11 +18,19 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Minute",
-				"interval": 15,
-				"startTime": "2021-03-30T12:25:00Z",
-				"endTime": "2021-03-31T12:30:00Z",
-				"timeZone": "UTC"
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2021-03-30T12:25:00",
+				"endTime": "2021-03-31T15:30:00",
+				"timeZone": "GMT Standard Time",
+				"schedule": {
+					"minutes": [
+						20
+					],
+					"hours": [
+						14
+					]
+				}
 			}
 		}
 	}
