@@ -76,7 +76,7 @@
 		"variables": {
 			"SourceRelativeURL": {
 				"type": "String",
-				"defaultValue": "/covid19/main/raw/main/ecdc_data/"
+				"defaultValue": "covid19/main/raw/main/ecdc_data"
 			},
 			"sinkFileName": {
 				"type": "String",
