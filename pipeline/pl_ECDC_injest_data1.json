@@ -56,14 +56,7 @@
 						{
 							"name": "CopyAllDataFilesToABS",
 							"type": "Copy",
-							"dependsOn": [
-								{
-									"activity": "DeleteAllFilesInSource",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "7.00:00:00",
 								"retry": 0,
@@ -132,41 +125,6 @@
 									}
 								}
 							]
-						},
-						{
-							"name": "DeleteAllFilesInSource",
-							"type": "Delete",
-							"dependsOn": [],
-							"policy": {
-								"timeout": "7.00:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
-								"secureOutput": false,
-								"secureInput": false
-							},
-							"userProperties": [],
-							"typeProperties": {
-								"dataset": {
-									"referenceName": "ds_ECDC_Files_csv",
-									"type": "DatasetReference",
-									"parameters": {
-										"relativeURL": {
-											"value": "@item().sourceRelativeURL",
-											"type": "Expression"
-										},
-										"baseURL": {
-											"value": "@item().sourceBaseURL",
-											"type": "Expression"
-										}
-									}
-								},
-								"enableLogging": false,
-								"storeSettings": {
-									"type": "HttpReadSettings",
-									"requestMethod": "POST",
-									"requestTimeout": ""
-								}
-							}
 						}
 					]
 				}
