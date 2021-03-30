@@ -163,7 +163,7 @@
 								"enableLogging": false,
 								"storeSettings": {
 									"type": "HttpReadSettings",
-									"requestMethod": "GET",
+									"requestMethod": "POST",
 									"requestTimeout": ""
 								}
 							}
