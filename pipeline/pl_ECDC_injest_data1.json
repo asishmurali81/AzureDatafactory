@@ -5,7 +5,14 @@
 			{
 				"name": "CpyCasesandData",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ForEachECDCFiles",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -105,6 +112,26 @@
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "ForEachECDCFiles",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "LookupECDCFileLIst",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('LookupECDCFileLIst').output.value",
+						"type": "Expression"
+					},
+					"isSequential": false
 				}
 			}
 		],
