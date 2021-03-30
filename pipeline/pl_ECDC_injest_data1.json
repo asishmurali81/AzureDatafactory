@@ -56,7 +56,14 @@
 						{
 							"name": "CopyAllDataFilesToABS",
 							"type": "Copy",
-							"dependsOn": [],
+							"dependsOn": [
+								{
+									"activity": "DeleteAllFilesInSource",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
 							"policy": {
 								"timeout": "7.00:00:00",
 								"retry": 0,
