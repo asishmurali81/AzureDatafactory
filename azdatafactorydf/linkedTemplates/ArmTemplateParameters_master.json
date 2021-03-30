@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "azdatafactorydf"
+		},
+		"ls_blobstorage_sink_connectionString": {
+			"value": ""
+		},
+		"ls_http_ECDC_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/cloudboxacademy/"
+		},
+		"tr_ecdcinjest_data_properties_pl_ECDC_injest_data1_parameters_SourceRelativeURL": {
+			"value": "covid19/main/raw/main/ecdc_data/hospital_admissions.csv"
+		},
+		"tr_ecdcinjest_data_properties_pl_ECDC_injest_data1_parameters_sinkFileName": {
+			"value": "hospital_admissions.csv"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
