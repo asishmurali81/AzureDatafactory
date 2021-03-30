@@ -9,13 +9,7 @@
 			"value": ""
 		},
 		"ls_http_ECDC_properties_typeProperties_url": {
-			"value": "https://raw.githubusercontent.com/cloudboxacademy/"
-		},
-		"tr_ecdcinjest_data_properties_pl_ECDC_injest_data1_parameters_SourceRelativeURL": {
-			"value": "covid19/main/raw/main/ecdc_data/hospital_admissions.csv"
-		},
-		"tr_ecdcinjest_data_properties_pl_ECDC_injest_data1_parameters_sinkFileName": {
-			"value": "hospital_admissions.csv"
+			"value": "@{linkedService().baseUrl}"
 		}
 	}
 }
