@@ -1,5 +1,5 @@
 {
-	"name": "pipelinepl_injest_data1",
+	"name": "pl_ECDC_injest_data1",
 	"properties": {
 		"activities": [
 			{
