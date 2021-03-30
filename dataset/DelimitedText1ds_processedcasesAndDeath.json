@@ -1,0 +1,23 @@
+{
+	"name": "DelimitedText1ds_processedcasesAndDeath",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "ecdc/casesAndDeaths",
+				"container": "processed"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
