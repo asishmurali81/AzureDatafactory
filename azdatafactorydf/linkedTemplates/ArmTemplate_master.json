@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "azdatafactorydf"
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"SqlServer1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
+		},
 		"ls_blobstorage_sink_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blobstorage_sink'"
@@ -14,6 +22,17 @@
 		"ls_http_ECDC_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "@{linkedService().baseUrl}"
+		},
+		"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "assqlserver10001.database.windows.net"
+		},
+		"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "asish"
+		},
+		"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
 		},
 		"containerUri": {
 			"type": "string",
@@ -42,11 +61,26 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
 					"ls_blobstorage_sink_connectionString": {
 						"value": "[parameters('ls_blobstorage_sink_connectionString')]"
 					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
+					},
 					"ls_http_ECDC_properties_typeProperties_url": {
 						"value": "[parameters('ls_http_ECDC_properties_typeProperties_url')]"
+					},
+					"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
 					}
 				}
 			},

@@ -5,11 +5,26 @@
 		"factoryName": {
 			"value": "azdatafactorydf"
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
 		"ls_blobstorage_sink_connectionString": {
 			"value": ""
 		},
 		"ls_http_ECDC_properties_typeProperties_url": {
 			"value": "@{linkedService().baseUrl}"
+		},
+		"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "assqlserver10001.database.windows.net"
+		},
+		"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "asish"
+		},
+		"AzureSSISIRRuntime_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
 		}
 	}
 }
