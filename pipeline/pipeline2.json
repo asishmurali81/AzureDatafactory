@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"packageLocation": {
-						"packagePath": "Test/LoadfromFile",
+						"packagePath": "Test/LoadfromFile/LoadFromFile.dtsx",
 						"type": "SSISDB"
 					},
 					"environmentPath": "./LoadFromFile",
